@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B3C9A27139D4E0F0042676B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A26139D4E0F0042676B /* CoreVideo.framework */; };
+		1B3C9A2A139D4E150042676B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A29139D4E150042676B /* AVFoundation.framework */; };
+		1B3C9A2C139D4E1C0042676B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A2B139D4E1C0042676B /* CoreImage.framework */; };
+		1B3C9A2E139D4E350042676B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A2D139D4E350042676B /* AssetsLibrary.framework */; };
+		1B3C9A30139D4E5F0042676B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A2F139D4E5F0042676B /* CoreMedia.framework */; };
+		1B3C9A32139D4E740042676B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A31139D4E740042676B /* QuartzCore.framework */; };
+		1B3C9A34139D4EAA0042676B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3C9A33139D4EAA0042676B /* ImageIO.framework */; };
+		1B867FDD139D4AD300AD6B47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B867FDC139D4AD300AD6B47 /* UIKit.framework */; };
+		1B867FDF139D4AD300AD6B47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B867FDE139D4AD300AD6B47 /* Foundation.framework */; };
+		1B867FE1139D4AD300AD6B47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B867FE0139D4AD300AD6B47 /* CoreGraphics.framework */; };
+		7F06473415AA123600699923 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06472815AA123600699923 /* MainStoryboard_iPhone.storyboard */; };
+		7F06473515AA123600699923 /* EVFaceTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06472B15AA123600699923 /* EVFaceTracker.m */; };
+		7F06473615AA123600699923 /* EVFaceTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06472D15AA123600699923 /* EVFaceTrackerAppDelegate.m */; };
+		7F06473715AA123600699923 /* EVFaceTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06472F15AA123600699923 /* EVFaceTrackerViewController.m */; };
+		7F06473815AA123600699923 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F06473015AA123600699923 /* Info.plist */; };
+		7F06473915AA123600699923 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06473115AA123600699923 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B3C9A26139D4E0F0042676B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		1B3C9A29139D4E150042676B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1B3C9A2B139D4E1C0042676B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		1B3C9A2D139D4E350042676B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		1B3C9A2F139D4E5F0042676B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1B3C9A31139D4E740042676B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1B3C9A33139D4EAA0042676B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		1B867FD8139D4AD300AD6B47 /* EVFaceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EVFaceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B867FDC139D4AD300AD6B47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B867FDE139D4AD300AD6B47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B867FE0139D4AD300AD6B47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F06472915AA123600699923 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7F06472A15AA123600699923 /* EVFaceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTracker.h; sourceTree = "<group>"; };
+		7F06472B15AA123600699923 /* EVFaceTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVFaceTracker.m; sourceTree = "<group>"; };
+		7F06472C15AA123600699923 /* EVFaceTrackerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTrackerAppDelegate.h; sourceTree = "<group>"; };
+		7F06472D15AA123600699923 /* EVFaceTrackerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVFaceTrackerAppDelegate.m; sourceTree = "<group>"; };
+		7F06472E15AA123600699923 /* EVFaceTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTrackerViewController.h; sourceTree = "<group>"; };
+		7F06472F15AA123600699923 /* EVFaceTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVFaceTrackerViewController.m; sourceTree = "<group>"; };
+		7F06473015AA123600699923 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EVFaceTracker/Info.plist; sourceTree = "<group>"; };
+		7F06473115AA123600699923 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EVFaceTracker/main.m; sourceTree = "<group>"; };
+		7F06473215AA123600699923 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = EVFaceTracker/Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B867FD5139D4AD300AD6B47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B3C9A34139D4EAA0042676B /* ImageIO.framework in Frameworks */,
+				1B3C9A32139D4E740042676B /* QuartzCore.framework in Frameworks */,
+				1B3C9A30139D4E5F0042676B /* CoreMedia.framework in Frameworks */,
+				1B867FE1139D4AD300AD6B47 /* CoreGraphics.framework in Frameworks */,
+				1B3C9A2E139D4E350042676B /* AssetsLibrary.framework in Frameworks */,
+				1B3C9A2C139D4E1C0042676B /* CoreImage.framework in Frameworks */,
+				1B3C9A2A139D4E150042676B /* AVFoundation.framework in Frameworks */,
+				1B3C9A27139D4E0F0042676B /* CoreVideo.framework in Frameworks */,
+				1B867FDD139D4AD300AD6B47 /* UIKit.framework in Frameworks */,
+				1B867FDF139D4AD300AD6B47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B867FCD139D4AD300AD6B47 = {
+			isa = PBXGroup;
+			children = (
+				7F06472515AA123600699923 /* EVFaceTracker */,
+				7F7F69E615AA15B40066BA89 /* Project files */,
+				7F7F69E515AA159B0066BA89 /* Recources */,
+				1B867FDB139D4AD300AD6B47 /* Frameworks */,
+				1B867FD9139D4AD300AD6B47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B867FD9139D4AD300AD6B47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B867FD8139D4AD300AD6B47 /* EVFaceTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B867FDB139D4AD300AD6B47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B3C9A33139D4EAA0042676B /* ImageIO.framework */,
+				1B3C9A31139D4E740042676B /* QuartzCore.framework */,
+				1B3C9A2F139D4E5F0042676B /* CoreMedia.framework */,
+				1B3C9A2D139D4E350042676B /* AssetsLibrary.framework */,
+				1B3C9A2B139D4E1C0042676B /* CoreImage.framework */,
+				1B3C9A29139D4E150042676B /* AVFoundation.framework */,
+				1B3C9A26139D4E0F0042676B /* CoreVideo.framework */,
+				1B867FDC139D4AD300AD6B47 /* UIKit.framework */,
+				1B867FDE139D4AD300AD6B47 /* Foundation.framework */,
+				1B867FE0139D4AD300AD6B47 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F06472515AA123600699923 /* EVFaceTracker */ = {
+			isa = PBXGroup;
+			children = (
+				7F06472A15AA123600699923 /* EVFaceTracker.h */,
+				7F06472B15AA123600699923 /* EVFaceTracker.m */,
+				7F06472C15AA123600699923 /* EVFaceTrackerAppDelegate.h */,
+				7F06472D15AA123600699923 /* EVFaceTrackerAppDelegate.m */,
+				7F06472E15AA123600699923 /* EVFaceTrackerViewController.h */,
+				7F06472F15AA123600699923 /* EVFaceTrackerViewController.m */,
+			);
+			path = EVFaceTracker;
+			sourceTree = "<group>";
+		};
+		7F7F69E515AA159B0066BA89 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				7F06472815AA123600699923 /* MainStoryboard_iPhone.storyboard */,
+			);
+			name = Recources;
+			sourceTree = "<group>";
+		};
+		7F7F69E615AA15B40066BA89 /* Project files */ = {
+			isa = PBXGroup;
+			children = (
+				7F06473015AA123600699923 /* Info.plist */,
+				7F06473115AA123600699923 /* main.m */,
+				7F06473215AA123600699923 /* Prefix.pch */,
+			);
+			name = "Project files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B867FD7139D4AD300AD6B47 /* EVFaceTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B867FFA139D4AD300AD6B47 /* Build configuration list for PBXNativeTarget "EVFaceTracker" */;
+			buildPhases = (
+				1B867FD4139D4AD300AD6B47 /* Sources */,
+				1B867FD5139D4AD300AD6B47 /* Frameworks */,
+				1B867FD6139D4AD300AD6B47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EVFaceTracker;
+			productName = StacheCam;
+			productReference = 1B867FD8139D4AD300AD6B47 /* EVFaceTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B867FCF139D4AD300AD6B47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1B867FD2139D4AD300AD6B47 /* Build configuration list for PBXProject "EVFaceTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B867FCD139D4AD300AD6B47;
+			productRefGroup = 1B867FD9139D4AD300AD6B47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B867FD7139D4AD300AD6B47 /* EVFaceTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B867FD6139D4AD300AD6B47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F06473415AA123600699923 /* MainStoryboard_iPhone.storyboard in Resources */,
+				7F06473815AA123600699923 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B867FD4139D4AD300AD6B47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F06473515AA123600699923 /* EVFaceTracker.m in Sources */,
+				7F06473615AA123600699923 /* EVFaceTrackerAppDelegate.m in Sources */,
+				7F06473715AA123600699923 /* EVFaceTrackerViewController.m in Sources */,
+				7F06473915AA123600699923 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F06472815AA123600699923 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F06472915AA123600699923 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			path = EVFaceTracker;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B867FF8139D4AD300AD6B47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B867FF9139D4AD300AD6B47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B867FFB139D4AD300AD6B47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EVFaceTracker/Prefix.pch;
+				INFOPLIST_FILE = EVFaceTracker/Info.plist;
+				PRODUCT_NAME = EVFaceTracker;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1B867FFC139D4AD300AD6B47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EVFaceTracker/Prefix.pch;
+				INFOPLIST_FILE = EVFaceTracker/Info.plist;
+				PRODUCT_NAME = EVFaceTracker;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B867FD2139D4AD300AD6B47 /* Build configuration list for PBXProject "EVFaceTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B867FF8139D4AD300AD6B47 /* Debug */,
+				1B867FF9139D4AD300AD6B47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B867FFA139D4AD300AD6B47 /* Build configuration list for PBXNativeTarget "EVFaceTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B867FFB139D4AD300AD6B47 /* Debug */,
+				1B867FFC139D4AD300AD6B47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B867FCF139D4AD300AD6B47 /* Project object */;
+}
