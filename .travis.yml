@@ -1,0 +1,12 @@
+language: objective-c 
+podfile: EVFaceTracker/Podfile
+osx_image: xcode611
+
+before_install: 
+- export LANG=en_US.UTF-8
+- brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+
+script:
+- xctool clean build -project EVFaceTracker.xcodeproj -scheme EVFaceTracker -sdk iphonesimulator8.1 ONLY_ACTIVE_ARCH=NO
+
