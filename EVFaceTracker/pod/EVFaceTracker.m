@@ -1,9 +1,8 @@
 //
 //  EVFaceTracker.m
-//  EVFaceTracking 
 //
 //  Created by Edwin Vermeer on 3/13/12.
-//  Copyright (c) 2012 EVICT B.V. All rights reserved.
+//  Copyright (c) 2012. All rights reserved.
 //
 
 #import "EVFaceTracker.h"
@@ -30,7 +29,7 @@ enum {
 
 @implementation EVFaceTracker
 
-@synthesize delegate, faceRect;
+@synthesize delegate, faceRect, reactionFactor, updateInterval;
 
 - (id)initWithDelegate:(id)theDelegate {
     if ((self = [super init])) {
@@ -44,11 +43,30 @@ enum {
 
 - (void)dealloc {
     if (videoDataOutputQueue) {
-        dispatch_release(videoDataOutputQueue);
+    //    dispatch_release(videoDataOutputQueue);
     }
     [stillImageOutput removeObserver:self forKeyPath:@"isCapturingStillImage"];
-    //    [previewLayer removeFromSuperlayer];
+}
 
+
+-(void)fluidUpdateInterval:(float)interval withReactionFactor:(float) factor {
+    if (factor <= 0 || factor > 1) {
+        NSAssert(NO, @"Error! fluidUpdateInterval factor should be between 0 and 1");
+    }
+    self.reactionFactor = factor;
+    self.updateInterval = interval;
+    [self performSelector:@selector(setDistance) withObject:nil afterDelay:interval];
+}
+
+-(void) setDistance {
+    // The size of the recognized face does not change fluid.
+    // In order to still animate it fluient we do some calculations.
+    previousDistance = (1.0f - reactionFactor) * previousDistance +  reactionFactor * distance;
+    
+    [delegate fluentUpdateDistance:previousDistance];
+    
+    // Make sure we do a recalculation 10 times every second in order to make sure we animate to the final position.
+    [self performSelector:@selector(setDistance) withObject:nil afterDelay:updateInterval];
 }
 
 
@@ -64,14 +82,6 @@ enum {
     NSDictionary *imageOptions = nil;
     UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
     
-    /* kCGImagePropertyOrientation values
-     The intended display orientation of the image. If present, this key is a CFNumber value with the same value as defined
-     by the TIFF and EXIF specifications -- see enumeration of integer constants.
-     The value specified where the origin (0,0) of the image is located. If not present, a value of 1 is assumed.
-     
-     used when calling featuresInImage: options: The value for this key is an integer NSNumber from 1..8 as found in kCGImagePropertyOrientation.
-     If present, the detection will be done based on that orientation but the coordinates in the returned features will still be based on those of the image. */
-        
     int exifOrientation;
     switch (curDeviceOrientation) {
         case UIDeviceOrientationPortraitUpsideDown:  // Device oriented vertically, home button on the top
@@ -159,10 +169,7 @@ enum {
     previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
     [previewLayer setBackgroundColor:[[UIColor blackColor] CGColor]];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
-    //    CALayer *rootLayer = [previewView layer];
-    //    [rootLayer setMasksToBounds:YES];
     [previewLayer setFrame:CGRectMake(0,0,320,480)];
-    //    [rootLayer addSublayer:previewLayer];
     
     [session startRunning];
     
@@ -198,7 +205,8 @@ enum {
     
     CGSize parentFrameSize = [previewLayer frame].size;
     NSString *gravity = [previewLayer videoGravity];
-    BOOL isMirrored = [previewLayer isMirrored];
+    BOOL isMirrored = previewLayer.connection.isVideoMirrored;
+    
     CGRect previewBox = [EVFaceTracker videoPreviewBoxForGravity:gravity frameSize:parentFrameSize apertureSize:clap.size];
     
     for (CIFaceFeature *ff in features) {
@@ -228,7 +236,13 @@ enum {
             faceRect = CGRectOffset(faceRect, previewBox.origin.x, previewBox.origin.y);
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
-            [delegate faceIsTracked];
+            float offsetWidth = (faceRect.origin.x - (160 - (faceRect.size.width / 2))) ;
+            float offsetHeight = (faceRect.origin.y  - ( 240 -(faceRect.origin.y /2 )));
+            
+            // This is the current recongized distance. See the setDistance method for usages
+            distance = (800.0f - (faceRect.size.width + faceRect.size.height)) / 10.0f;
+
+            [delegate faceIsTracked:faceRect withOffsetWidth:offsetWidth andOffsetHeight:offsetHeight andDistance: distance];
         });
     }
     

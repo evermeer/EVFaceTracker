@@ -18,11 +18,13 @@
 		1B867FDF139D4AD300AD6B47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B867FDE139D4AD300AD6B47 /* Foundation.framework */; };
 		1B867FE1139D4AD300AD6B47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B867FE0139D4AD300AD6B47 /* CoreGraphics.framework */; };
 		7F06473415AA123600699923 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06472815AA123600699923 /* MainStoryboard_iPhone.storyboard */; };
-		7F06473515AA123600699923 /* EVFaceTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06472B15AA123600699923 /* EVFaceTracker.m */; };
 		7F06473615AA123600699923 /* EVFaceTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06472D15AA123600699923 /* EVFaceTrackerAppDelegate.m */; };
 		7F06473715AA123600699923 /* EVFaceTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06472F15AA123600699923 /* EVFaceTrackerViewController.m */; };
-		7F06473815AA123600699923 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F06473015AA123600699923 /* Info.plist */; };
 		7F06473915AA123600699923 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F06473115AA123600699923 /* main.m */; };
+		7F0943981AFCE6CE005DE178 /* EVFaceTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0943971AFCE6CE005DE178 /* EVFaceTracker.m */; };
+		7F09439C1AFCE6E7005DE178 /* EVFaceTracker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7F0943991AFCE6E7005DE178 /* EVFaceTracker.podspec */; };
+		7F09439D1AFCE6E7005DE178 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7F09439A1AFCE6E7005DE178 /* LICENSE */; };
+		7F09439E1AFCE6E7005DE178 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7F09439B1AFCE6E7005DE178 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,6 @@
 		1B867FDE139D4AD300AD6B47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B867FE0139D4AD300AD6B47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7F06472915AA123600699923 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		7F06472A15AA123600699923 /* EVFaceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTracker.h; sourceTree = "<group>"; };
-		7F06472B15AA123600699923 /* EVFaceTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVFaceTracker.m; sourceTree = "<group>"; };
 		7F06472C15AA123600699923 /* EVFaceTrackerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTrackerAppDelegate.h; sourceTree = "<group>"; };
 		7F06472D15AA123600699923 /* EVFaceTrackerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVFaceTrackerAppDelegate.m; sourceTree = "<group>"; };
 		7F06472E15AA123600699923 /* EVFaceTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTrackerViewController.h; sourceTree = "<group>"; };
@@ -47,6 +47,11 @@
 		7F06473015AA123600699923 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EVFaceTracker/Info.plist; sourceTree = "<group>"; };
 		7F06473115AA123600699923 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EVFaceTracker/main.m; sourceTree = "<group>"; };
 		7F06473215AA123600699923 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = EVFaceTracker/Prefix.pch; sourceTree = "<group>"; };
+		7F0943961AFCE6CE005DE178 /* EVFaceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVFaceTracker.h; sourceTree = "<group>"; };
+		7F0943971AFCE6CE005DE178 /* EVFaceTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVFaceTracker.m; sourceTree = "<group>"; };
+		7F0943991AFCE6E7005DE178 /* EVFaceTracker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EVFaceTracker.podspec; sourceTree = "<group>"; };
+		7F09439A1AFCE6E7005DE178 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7F09439B1AFCE6E7005DE178 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,9 @@
 		1B867FCD139D4AD300AD6B47 = {
 			isa = PBXGroup;
 			children = (
+				7F0943991AFCE6E7005DE178 /* EVFaceTracker.podspec */,
+				7F09439A1AFCE6E7005DE178 /* LICENSE */,
+				7F09439B1AFCE6E7005DE178 /* README.md */,
 				7F06472515AA123600699923 /* EVFaceTracker */,
 				7F7F69E615AA15B40066BA89 /* Project files */,
 				7F7F69E515AA159B0066BA89 /* Recources */,
@@ -109,14 +117,22 @@
 		7F06472515AA123600699923 /* EVFaceTracker */ = {
 			isa = PBXGroup;
 			children = (
-				7F06472A15AA123600699923 /* EVFaceTracker.h */,
-				7F06472B15AA123600699923 /* EVFaceTracker.m */,
+				7F0943951AFCE6CE005DE178 /* pod */,
 				7F06472C15AA123600699923 /* EVFaceTrackerAppDelegate.h */,
 				7F06472D15AA123600699923 /* EVFaceTrackerAppDelegate.m */,
 				7F06472E15AA123600699923 /* EVFaceTrackerViewController.h */,
 				7F06472F15AA123600699923 /* EVFaceTrackerViewController.m */,
 			);
 			path = EVFaceTracker;
+			sourceTree = "<group>";
+		};
+		7F0943951AFCE6CE005DE178 /* pod */ = {
+			isa = PBXGroup;
+			children = (
+				7F0943961AFCE6CE005DE178 /* EVFaceTracker.h */,
+				7F0943971AFCE6CE005DE178 /* EVFaceTracker.m */,
+			);
+			path = pod;
 			sourceTree = "<group>";
 		};
 		7F7F69E515AA159B0066BA89 /* Recources */ = {
@@ -164,6 +180,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				TargetAttributes = {
+					1B867FD7139D4AD300AD6B47 = {
+						DevelopmentTeam = 443FV7F3ZK;
+					};
+				};
 			};
 			buildConfigurationList = 1B867FD2139D4AD300AD6B47 /* Build configuration list for PBXProject "EVFaceTracker" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -187,8 +208,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F09439D1AFCE6E7005DE178 /* LICENSE in Resources */,
 				7F06473415AA123600699923 /* MainStoryboard_iPhone.storyboard in Resources */,
-				7F06473815AA123600699923 /* Info.plist in Resources */,
+				7F09439C1AFCE6E7005DE178 /* EVFaceTracker.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F06473515AA123600699923 /* EVFaceTracker.m in Sources */,
+				7F0943981AFCE6CE005DE178 /* EVFaceTracker.m in Sources */,
 				7F06473615AA123600699923 /* EVFaceTrackerAppDelegate.m in Sources */,
+				7F09439E1AFCE6E7005DE178 /* README.md in Sources */,
 				7F06473715AA123600699923 /* EVFaceTrackerViewController.m in Sources */,
 				7F06473915AA123600699923 /* main.m in Sources */,
 			);
@@ -227,8 +250,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Edwin Vermeer (7HFV3VEY7J)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -244,7 +266,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4B392A05-3DBC-4DA4-9694-B084B694EE36";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -256,8 +278,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Edwin Vermeer (7HFV3VEY7J)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -267,7 +288,7 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4B392A05-3DBC-4DA4-9694-B084B694EE36";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -279,6 +300,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EVFaceTracker/Prefix.pch;
 				INFOPLIST_FILE = EVFaceTracker/Info.plist;
@@ -294,6 +316,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EVFaceTracker/Prefix.pch;
 				INFOPLIST_FILE = EVFaceTracker/Info.plist;

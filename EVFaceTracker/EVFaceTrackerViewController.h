@@ -1,9 +1,8 @@
 //
 //  EVFaceTrackerViewController.h
-//  EVFaceTracker 
 //
 //  Created by Edwin Vermeer on 3/13/12.
-//  Copyright (c) 2012 EVICT B.V. All rights reserved.
+//  Copyright (c) 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,8 +15,6 @@
     IBOutlet UIView *dynamicView;
     IBOutlet UILabel *dynamicLabel;
     EVFaceTracker *evFaceTracker;
-    float distance;
-    float previousDistance;
 }
 
 @end
