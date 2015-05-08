@@ -17,7 +17,7 @@ TL;DR: Use face detection for calculating distance and angle of your phone.
 [![Website](https://img.shields.io/badge/website-evict.nl-blue.svg?style=flat)](http://evict.nl)
 [![eMail](https://img.shields.io/badge/email-edwin@evict.nl-blue.svg?style=flat)](mailto:edwin@evict.nl?SUBJECT=About EVFaceTracker)
 
-Here is a demo wher this is used for setting the shadow and size of a text.
+Here is a demo where this is used for setting the shadow and size of a text.
 
 ![Screenshot0](https://github.com/evermeer/EVFaceTracker/blob/master/EVFaceTracker.gif?raw=true)
 
