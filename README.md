@@ -3,8 +3,6 @@
 
 TL;DR: Use face detection for calculating distance and angle of your phone.
 
-This version is for Xcode 6.3. Travis-ci build is failing because it's running Xcode 6.1.1 Have to wait for the build to pass again when Travis-ci adds Xcode 6.3 as an option (planned for end May?)
-
 [![Build Status](https://travis-ci.org/evermeer/EVFaceTracker.svg?style=flat)](https://travis-ci.org/evermeer/EVFaceTracker)
 [![Issues](https://img.shields.io/github/issues-raw/evermeer/EVFaceTracker.svg?style=flat)](https://github.com/evermeer/EVFaceTracker/issues)
 [![Stars](https://img.shields.io/github/stars/evermeer/EVFaceTracker.svg?style=flat)](https://github.com/evermeer/EVFaceTracker/stargazers)
