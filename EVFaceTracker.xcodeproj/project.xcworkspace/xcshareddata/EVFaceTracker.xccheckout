@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4F5CA363-DB3E-46E9-92D6-FC8A788EA7C7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>EVFaceTracker</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2BD3008FE5D49CE211759643D0CEBEB7A3F5D4B5</key>
 		<string>https://github.com/evermeer/EVFaceTracker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EVFaceTracker.xcodeproj</string>
+	<string>EVFaceTracker.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2BD3008FE5D49CE211759643D0CEBEB7A3F5D4B5</key>

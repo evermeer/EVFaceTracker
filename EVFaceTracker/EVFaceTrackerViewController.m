@@ -14,8 +14,8 @@
     [super viewDidLoad];
     // Start tracking your face.
     evFaceTracker = [[EVFaceTracker alloc] initWithDelegate:self];
-    // And give us a smooth update 10 times per second.
-    [evFaceTracker fluidUpdateInterval:0.1f withReactionFactor:0.5f];
+    // And give us a smooth update 20 times per second.
+    [evFaceTracker fluidUpdateInterval:0.05f withReactionFactor:0.3f];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

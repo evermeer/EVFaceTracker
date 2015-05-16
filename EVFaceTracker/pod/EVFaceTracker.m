@@ -21,6 +21,7 @@ enum {
 };
 
 @interface EVFaceTracker (private)
+-(void) setDistance;
 - (BOOL)setupAVCapture;
 - (void)calculateFaceBoxesForFeatures:(NSArray *)features forVideoBox:(CGRect)clap orientation:(UIDeviceOrientation)orientation;
 + (CGRect)videoPreviewBoxForGravity:(NSString *)gravity frameSize:(CGSize)frameSize apertureSize:(CGSize)apertureSize;
@@ -29,7 +30,8 @@ enum {
 
 @implementation EVFaceTracker
 
-@synthesize delegate, faceRect, reactionFactor, updateInterval;
+@synthesize  delegate, faceRect, reactionFactor, updateInterval;
+
 
 - (id)initWithDelegate:(id)theDelegate {
     if ((self = [super init])) {
@@ -56,17 +58,6 @@ enum {
     self.reactionFactor = factor;
     self.updateInterval = interval;
     [self performSelector:@selector(setDistance) withObject:nil afterDelay:interval];
-}
-
--(void) setDistance {
-    // The size of the recognized face does not change fluid.
-    // In order to still animate it fluient we do some calculations.
-    previousDistance = (1.0f - reactionFactor) * previousDistance +  reactionFactor * distance;
-    
-    [delegate fluentUpdateDistance:previousDistance];
-    
-    // Make sure we do a recalculation 10 times every second in order to make sure we animate to the final position.
-    [self performSelector:@selector(setDistance) withObject:nil afterDelay:updateInterval];
 }
 
 
@@ -114,6 +105,17 @@ enum {
 
 
 @implementation EVFaceTracker (private)
+
+-(void) setDistance {
+    // The size of the recognized face does not change fluid.
+    // In order to still animate it fluient we do some calculations.
+    previousDistance = (1.0f - reactionFactor) * previousDistance +  reactionFactor * distance;
+    
+    [self.delegate fluentUpdateDistance:previousDistance];
+    
+    // Make sure we do a recalculation 10 times every second in order to make sure we animate to the final position.
+    [self performSelector:@selector(setDistance) withObject:nil afterDelay:updateInterval];
+}
 
 - (BOOL)setupAVCapture {
     NSError *error = nil;
@@ -242,7 +244,7 @@ enum {
             // This is the current recongized distance. See the setDistance method for usages
             distance = (800.0f - (faceRect.size.width + faceRect.size.height)) / 10.0f;
 
-            [delegate faceIsTracked:faceRect withOffsetWidth:offsetWidth andOffsetHeight:offsetHeight andDistance: distance];
+            [self.delegate faceIsTracked:faceRect withOffsetWidth:offsetWidth andOffsetHeight:offsetHeight andDistance: distance];
         });
     }
     
@@ -250,7 +252,8 @@ enum {
 }
 
 
-// find where the video box is positioned within the preview layer based on the video size and gravity
+
+// Find where the video box is positioned within the preview layer based on the video size and gravity
 + (CGRect)videoPreviewBoxForGravity:(NSString *)gravity frameSize:(CGSize)frameSize apertureSize:(CGSize)apertureSize {
     CGFloat apertureRatio = apertureSize.height / apertureSize.width;
     CGFloat viewRatio = frameSize.width / frameSize.height;
