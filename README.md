@@ -1,5 +1,5 @@
 
-#EVFaceTracker
+# EVFaceTracker
 
 TL;DR: Use face detection for calculating distance and angle of your phone.
 
@@ -24,7 +24,7 @@ Here is a demo where this is used for setting the shadow and size of a text.
 For a longer demo see: https://www.youtube.com/watch?v=yLAtc7AzjIk
 
 
-##Introduction
+## Introduction
 Earlier this month I had a discussion with a colleague about new forms of user interaction. On mobile devices there are now many applications that are using the compass and or accelerator. On a game consoles it’s very common to use a camera to interact with a game (Xbox Kinect and Playstation move) I thought it would be nice if we could use the front facing camera of a phone for interacting with an app. I had to see if this idea could be implemented.
 
 Since iOS 5 Apple has added a face detection api. My idea was to detect a face and estimate the distance the device is from your face based on the size of the detected face. If the rectangle of the detected face is big, then the device is close to your face, if it’s small, then the device is far away from your face. With a similar technique it is also possible to calculate the angle of the device in relation to the face. This angle is calculated based on how fare the detected face rectangle is away from the center of the screen.
@@ -56,7 +56,7 @@ pod "EVFaceTracker"
 You can also just copy EVFaceTracker.m and .h to your project. 
 
 
-##The demo code:
+## The demo code:
 
 ```
 - (void)viewDidLoad {
