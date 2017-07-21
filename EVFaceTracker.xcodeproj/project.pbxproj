@@ -184,7 +184,7 @@
 				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					1B867FD7139D4AD300AD6B47 = {
-						DevelopmentTeam = JPC3M2UF4R;
+						DevelopmentTeam = 8829GZ84Q6;
 					};
 				};
 			};
@@ -333,6 +333,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8829GZ84Q6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EVFaceTracker/Prefix.pch;
 				INFOPLIST_FILE = EVFaceTracker/Info.plist;
@@ -350,6 +351,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8829GZ84Q6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EVFaceTracker/Prefix.pch;
 				INFOPLIST_FILE = EVFaceTracker/Info.plist;

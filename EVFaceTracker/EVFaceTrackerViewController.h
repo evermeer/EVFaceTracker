@@ -15,6 +15,7 @@
     IBOutlet UIView *dynamicView;
     IBOutlet UILabel *dynamicLabel;
     EVFaceTracker *evFaceTracker;
+    IBOutlet UIView *borderView;
 }
 
 @end

@@ -6,7 +6,7 @@
 //
 
 #import "EVFaceTrackerViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation EVFaceTrackerViewController
 
@@ -16,6 +16,15 @@
     evFaceTracker = [[EVFaceTracker alloc] initWithDelegate:self];
     // And give us a smooth update 20 times per second.
     [evFaceTracker fluidUpdateInterval:0.05f withReactionFactor:0.3f];
+    
+    // init label
+    dynamicLabel.layer.masksToBounds = NO;
+    dynamicLabel.layer.shadowRadius = 5;
+    dynamicLabel.layer.shadowOpacity = 0.5;
+
+    // init face rect
+    borderView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    borderView.layer.borderWidth = 1;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -28,12 +37,16 @@
 - (void)faceIsTracked:(CGRect)faceRect withOffsetWidth:(float)offsetWidth andOffsetHeight:(float)offsetHeight andDistance:(float) distance {
     [CATransaction begin];
     [CATransaction setAnimationDuration:0.2];
-    CALayer *layer = dynamicLabel.layer;
-    layer.masksToBounds = NO;
-    layer.shadowOffset = CGSizeMake(offsetWidth / 5.0f, offsetHeight / 10.0f);
-    layer.shadowRadius = 5;
-    layer.shadowOpacity = 0.5;
+    
+    // set shadow
+    dynamicLabel.layer.shadowOffset = CGSizeMake(offsetWidth / 5.0f, offsetHeight / 10.0f);
+    
+    // set face frame rect
+    borderView.frame = faceRect;
+    borderView.alpha = 1;
+    
     [CATransaction commit];
+    
 }
 
 // When the fluidUpdateInterval method is called, then this delegate method will be called on a regular interval
@@ -43,7 +56,9 @@
     [CATransaction begin];
     [CATransaction setAnimationDuration:0.1f];
     [dynamicView.layer setAffineTransform:CGAffineTransformMakeScale(effectiveScale, effectiveScale)];
+    borderView.alpha = borderView.alpha - 0.1;
     [CATransaction commit];
+    
 }
 
 @end
