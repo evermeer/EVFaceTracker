@@ -47,7 +47,7 @@ You can install cocoapods by executing:
 [sudo] gem install cocoapods
 ```
 
-If you have installed cocoapods, then you can just add EVFaceTracker to your workspace by adding the folowing line to your Podfile:
+If you have installed cocoapods, then you can just add EVFaceTracker to your workspace by adding the following line to your Podfile:
 
 ```
 pod "EVFaceTracker"
